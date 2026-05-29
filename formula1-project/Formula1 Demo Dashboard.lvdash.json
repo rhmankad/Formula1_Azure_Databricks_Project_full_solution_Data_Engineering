@@ -1,0 +1,75 @@
+{
+  "datasets": [
+    {
+      "name": "8a761ca0",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "USE CATALOG `formula1`;\n",
+        "USE SCHEMA `gold`;\n",
+        "\n",
+        "select * \n",
+        "from v_driver_standing\n",
+        "where driver_name in ('Max Verstappen', 'Lewis Hamilton') and season>2014\n",
+        "order by season;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "4fa827b0",
+      "displayName": "Untitled Page",
+      "layout": [
+        {
+          "widget": {
+            "name": "1c9edd65",
+            "queries": [
+              {
+                "name": "f5ff6b73f6664309a100caab003f941f",
+                "query": {
+                  "datasetName": "8a761ca0",
+                  "fields": [
+                    {
+                      "name": "season",
+                      "expression": "`season`"
+                    },
+                    {
+                      "name": "column_cf38e32677",
+                      "expression": "SUM(`standings`)"
+                    },
+                    {
+                      "name": "driver_name",
+                      "expression": "`driver_name`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 0,
+              "viz_spec": {
+                "display_name": "Driver Performance",
+                "viz_type": "CHART",
+                "serialized_options": "{\"isAggregationOn\":true,\"series\":{\"error_y\":{\"type\":\"data\",\"visible\":true},\"stacking\":null},\"coefficient\":1,\"yAxis\":[{\"type\":\"-\"},{\"opposite\":true,\"type\":\"-\"}],\"columnConfigurationMap\":{\"series\":{\"column\":\"driver_name\",\"id\":\"column_cf38e32679\"},\"x\":{\"column\":\"season\",\"id\":\"column_cf38e32675\"},\"y\":[{\"column\":\"standings\",\"id\":\"column_cf38e32677\",\"transform\":\"SUM\"}]},\"alignYAxesAtZero\":true,\"direction\":{\"type\":\"counterclockwise\"},\"swappedAxes\":false,\"percentFormat\":\"0[.]00%\",\"textFormat\":\"\",\"legend\":{\"traceorder\":\"normal\"},\"globalSeriesType\":\"line\",\"version\":2,\"sizemode\":\"diameter\",\"seriesOptions\":{\"column_cf38e32677\":{\"type\":\"line\",\"yAxis\":0}},\"error_y\":{\"type\":\"data\",\"visible\":true},\"sortX\":true,\"showDataLabels\":false,\"missingValuesAsZero\":true,\"useAggregationsUi\":true,\"numberFormat\":\"0,0.[00000]\",\"dateTimeFormat\":\"DD/MM/YYYY HH:mm\",\"sortY\":true,\"valuesOptions\":{},\"xAxis\":{\"labels\":{\"enabled\":true},\"type\":\"-\"}}",
+                "query_name": "f5ff6b73f6664309a100caab003f941f"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 3,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}

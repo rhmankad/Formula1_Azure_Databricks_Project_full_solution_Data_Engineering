@@ -1,0 +1,2 @@
+# Formula1_Azure_Databricks_Project_full_solution_Data_Engineering
+An end-to-end Databricks data engineering pipeline processing Formula 1 datasets. It implements a Medallion Architecture (Bronze, Silver, Gold) on Delta Lake. Key features include incremental data processing (upserts), robust governance via Unity Catalog, and automated task orchestration using Lakeflow Jobs to deliver BI-ready analytics
